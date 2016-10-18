@@ -1,20 +1,17 @@
 angular.module('pick4me', [
-  pick4me.authorization,
-  pick4me.add,
-  pick4me.choose,
-  pick4me.delete
+  'pick4me.auth',
+  'ngRoute'
 ])
-
 .config(function($routeProvider){
   $routeProvider
     .when('/signin', {
       templateUrl: 'app/auhorization/signin.html',
-      controller: 'authorizationController',
+      controller: 'authController',
       authorization: false
     })
     .when('/signup', {
       templateUrl: 'app/authorization/signup.html',
-      controller: 'authorizationController',
+      controller: 'authController',
       authorization: false
     })
     .otherwise({redirectTo: '/signup'});

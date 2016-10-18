@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='pick4me'>
   <head>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <title>Pick4Me</title>
   </head>
   <body>
-    <div>
-      <h1>Pick4Me</h1>
-      <div ng-app='pick4me' ng-view></div>
+  <!-- <div>
+    <h1>Pick4Me</h1>
+  </div>
+    <nav class='navBar'>
+      <span>Add</span>
+      <span>Delete</span>
+      <span>Clear</span>
+    </nav>
+    <div> -->
+      <div ng-view ></div> 
+      <script src='node_modules/angular/angular.js'></script>
+      <script src='node_modules/angular-route/angular-route.js'></script>
+      <!-- <script src='app/addClearDelete/addClearDelete.js'></script> -->
+      <script src='app/authorization/authorization.js'></script>
+      <script src='app/choose/choose.js'></script>
+      <script src='app/app.js'></script>
     </div>
   </body>
-
-
 </html>

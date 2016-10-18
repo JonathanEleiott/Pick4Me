@@ -1,16 +1,17 @@
-<div id='signup'>
-  Sign Up
+<div id='signup' >
+  <h1>Sign Up</h1>
+
+  <form name='signupForm' ng-submit='console.log("submitted")'>
+
+    Username: <input name='signupInput' type='text'> 
+      <button ng-click='randomUsername()'>Pick4Me</button> 
+      <span ng-model='username'>{{username}}</span> <br />
+   <!--  Passowrd: <input type='password'> 
+      <button ng-click='randomPassword()'>Pick4Me</button> {{ password }} <br />
+    
+    <button>Submit</button> -->
+
+  </form>
 </div>
 
-<div ng-controller='authController'>
-  
-  Username: <input type='text'> 
-  	<button ng-click='randomUsername()'>Pick4Me</button> 
-  		<span ng-model=''> {{ username }} </span> <br />
-  
-  Passowrd: <input type='password'> 
-  	<button ng-click='randomPassword()'>Pick4Me</button> {{ password }} <br />
-  
-  <button ng-submit='console.log("submitted")'>Submit</button>
-
-</div>
+<!-- ng-controller='authController' -->
